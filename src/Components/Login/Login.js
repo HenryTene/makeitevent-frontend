@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Figure } from "react-bootstrap";
 import { Image } from "react-bootstrap";
+import event1 from "../../Images/event1.jpg";
 
 export default function Login() {
   return (
@@ -38,7 +39,19 @@ export default function Login() {
           </Form>
         </Col>
         <Col lg={6}>
-          <Image className="class-img" src="./images/event1.jpg" alt="" />
+          <br />
+          <br />
+          <br />
+          {/* <Image className="class-img" src="./images/event1.jpg" alt="" /> */}
+          <Figure>
+            <Figure.Image
+              width={1900}
+              height={1900}
+              alt="1900x1900"
+              src={event1}
+            />
+            <Figure.Caption>Encuentra tu evento favorito!</Figure.Caption>
+          </Figure>
         </Col>
       </Row>
     </Container>
