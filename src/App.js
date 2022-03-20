@@ -6,7 +6,7 @@ import Barra from './Components/Navbar/Barra'
 
 function App() {
   return (
-    <Register/>
+    <Barra/>
   );
 }
 

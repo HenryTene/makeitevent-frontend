@@ -3,52 +3,57 @@ import {
   Container,
   Nav,
   NavDropdown,
-  Row,
-  Col,
   Form,
   Button,
   Navbar,
   FormControl,
 } from "react-bootstrap";
 
+import imagen from "../../Images/makeitevent2.png";
+
 export default function Barra() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg">      
       <Container fluid>
-        <Navbar.Brand href="#">MAKEITEVENT</Navbar.Brand>
+        <Navbar.Brand href="#">
+          <img
+            alt=""
+            src={imagen}
+            width="150"
+            height="50"
+            className="d-inline-block align-top"
+          />{" "}
+        </Navbar.Brand>
         <Form className="d-flex">
           <FormControl
             type="search"
-            placeholder="Search"
+            placeholder="Buscar"
             className="me-2"
             aria-label="Search"
           />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="primary">Buscar</Button>
         </Form>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          </Nav>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <NavDropdown title="Organizacion" id="navbarScrollingDropdown">
+            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action5">
+              Something else here
+            </NavDropdown.Item>
+          </NavDropdown>
+          <NavDropdown title="Ayuda" id="navbarScrollingDropdown">
+            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action5">
+              Something else here
+            </NavDropdown.Item>
+          </NavDropdown>
         </Navbar.Collapse>
+        <Button variant="danger">Crear un evento</Button>
+        <Nav.Link href="#link">Iniciar Sesion</Nav.Link>
       </Container>
     </Navbar>
   );
